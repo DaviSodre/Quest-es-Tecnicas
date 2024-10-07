@@ -1,0 +1,21 @@
+def fibonacci(num):
+    
+    a, b = 0, 1
+    sequence = [a, b]
+    
+    while b < num:
+        a, b = b, a + b
+        sequence.append(b)
+
+    return sequence
+
+def pertence_a_fibonacci(num):
+    fib_sequence = fibonacci(num)
+    
+    if num in fib_sequence:
+        return f"O número {num} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {num} NÃO pertence à sequência de Fibonacci."
+
+numero = int(input("Informe um número: "))
+print(pertence_a_fibonacci(numero))
